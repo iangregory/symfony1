@@ -1,3 +1,16 @@
+## Patched for PHP 5.4 to 5.7
+
+This is Symfony 1.0 patched to work with PHP5.4 through PHP7, so far anyway. You need to use the mysqli driver in
+your PDO DSNs, in databases.yml. Patches accepted for compatibility and security only. Due to the extreme age
+of the code, we do accept patches that break versions of PHP PRIOR TO 5.4, and we have already introduced
+such breaking changes in order to cope with the removal of `/e` from PHP.
+
+There is ABSOLUTELY NO WARRANTY for this compatibility work. USE AT YOUR OWN RISK.
+
+The original README follows.
+
+## Original README
+
 Symfony is a complete framework designed to optimize the development of web applications by way of several key features.
 For starters, it separates a web application's business rules, server logic, and presentation views.
 It contains numerous tools and classes aimed at shortening the development time of a complex web application.
