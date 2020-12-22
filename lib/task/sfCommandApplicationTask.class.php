@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -88,7 +88,7 @@ abstract class sfCommandApplicationTask extends sfTask
    * @param  array   $arguments An array of arguments to pass to the task
    * @param  array   $options   An array of options to pass to the task
    *
-   * @return Boolean The returned value of the task run() method
+   * @return bool The returned value of the task run() method
    *
    * @see createTask()
    */

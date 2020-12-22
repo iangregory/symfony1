@@ -80,7 +80,7 @@ abstract class sfFormPropel extends sfFormObject
       $method = sprintf('getCurrent%s', $this->getI18nModelName($culture));
       $i18nObject = $this->getObject()->$method($culture);
       $i18n = new $class($i18nObject);
-      
+
       if ($i18nObject->isNew())
       {
         unset($i18n['id'], $i18n['culture']);
@@ -156,7 +156,7 @@ abstract class sfFormPropel extends sfFormObject
   /**
    * Returns true if the current form has some associated i18n objects.
    *
-   * @return Boolean true if the current form has some associated i18n objects, false otherwise
+   * @return bool true if the current form has some associated i18n objects, false otherwise
    */
   public function isI18n()
   {

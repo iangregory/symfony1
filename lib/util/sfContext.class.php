@@ -440,13 +440,13 @@ class sfContext implements ArrayAccess
   {
     return $this->configuration->getConfigCache();
   }
-  
+
   /**
    * Returns true if the context object exists (implements the ArrayAccess interface).
    *
    * @param  string $name The name of the context object
    *
-   * @return Boolean true if the context object exists, false otherwise
+   * @return bool true if the context object exists, false otherwise
    */
   public function offsetExists($name)
   {
@@ -544,7 +544,7 @@ class sfContext implements ArrayAccess
 
     return $parameters;
   }
-  
+
   /**
    * Calls methods defined via sfEventDispatcher.
    *

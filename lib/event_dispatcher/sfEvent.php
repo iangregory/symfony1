@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -93,7 +93,7 @@ class sfEvent implements ArrayAccess
   /**
    * Returns whether the event has been processed by a listener or not.
    *
-   * @return Boolean true if the event has been processed, false otherwise
+   * @return bool true if the event has been processed, false otherwise
    */
   public function isProcessed()
   {
@@ -115,7 +115,7 @@ class sfEvent implements ArrayAccess
    *
    * @param  string  $name  The parameter name
    *
-   * @return Boolean true if the parameter exists, false otherwise
+   * @return bool true if the parameter exists, false otherwise
    */
   public function offsetExists($name)
   {
@@ -143,7 +143,7 @@ class sfEvent implements ArrayAccess
    * Sets a parameter (implements the ArrayAccess interface).
    *
    * @param string  $name   The parameter name
-   * @param mixed   $value  The parameter value 
+   * @param mixed   $value  The parameter value
    */
   public function offsetSet($name, $value)
   {

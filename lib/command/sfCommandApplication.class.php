@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) 2004-2006 Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -277,7 +277,7 @@ abstract class sfCommandApplication
   /**
    * Returns whether the application must be verbose.
    *
-   * @return Boolean true if the application must be verbose, false otherwise
+   * @return bool true if the application must be verbose, false otherwise
    */
   public function isVerbose()
   {
@@ -287,7 +287,7 @@ abstract class sfCommandApplication
   /**
    * Returns whether the application must activate the trace.
    *
-   * @return Boolean true if the application must activate the trace, false otherwise
+   * @return bool true if the application must activate the trace, false otherwise
    */
   public function withTrace()
   {
@@ -630,7 +630,7 @@ abstract class sfCommandApplication
    *
    * @param  mixed  $stream  A stream
    *
-   * @return Boolean true if the stream supports colorization, false otherwise
+   * @return bool true if the stream supports colorization, false otherwise
    */
   protected function isStreamSupportsColors($stream)
   {

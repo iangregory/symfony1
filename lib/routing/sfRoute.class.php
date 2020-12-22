@@ -76,7 +76,7 @@ class sfRoute implements Serializable
   /**
    * Returns true if the route is bound to context and parameters.
    *
-   * @return Boolean true if theroute is bound to context and parameters, false otherwise
+   * @return bool true if theroute is bound to context and parameters, false otherwise
    */
   public function isBound()
   {
@@ -139,7 +139,7 @@ class sfRoute implements Serializable
    * @param  mixed  $params  The parameters
    * @param  array  $context The context
    *
-   * @return Boolean         true if the parameters matches this route, false otherwise.
+   * @return bool         true if the parameters matches this route, false otherwise.
    */
   public function matchesParameters($params, $context = array())
   {
@@ -581,7 +581,7 @@ class sfRoute implements Serializable
         throw new InvalidArgumentException(sprintf('Unable to parse "%s" route near "%s".', $this->pattern, $buffer));
       }
     }
-    
+
     // check for suffix
     if ($this->suffix)
     {
@@ -601,7 +601,7 @@ class sfRoute implements Serializable
    * @param Boolean  $afterASeparator  Whether the buffer is just after a separator
    * @param string   $currentSeparator The last matched separator
    *
-   * @return Boolean true if a token has been generated, false otherwise
+   * @return bool true if a token has been generated, false otherwise
    */
   protected function tokenizeBufferBefore(&$buffer, &$tokens, &$afterASeparator, &$currentSeparator)
   {
@@ -618,7 +618,7 @@ class sfRoute implements Serializable
    * @param Boolean  $afterASeparator  Whether the buffer is just after a separator
    * @param string   $currentSeparator The last matched separator
    *
-   * @return Boolean true if a token has been generated, false otherwise
+   * @return bool true if a token has been generated, false otherwise
    */
   protected function tokenizeBufferAfter(&$buffer, &$tokens, &$afterASeparator, &$currentSeparator)
   {

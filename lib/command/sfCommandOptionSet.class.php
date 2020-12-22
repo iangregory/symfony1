@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) 2004-2006 Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -102,7 +102,7 @@ class sfCommandOptionSet
    *
    * @param string $name The option name
    *
-   * @return Boolean true if the option object exists, false otherwise
+   * @return bool true if the option object exists, false otherwise
    */
   public function hasOption($name)
   {
@@ -124,7 +124,7 @@ class sfCommandOptionSet
    *
    * @param string $name The option shortcut
    *
-   * @return Boolean true if the option object exists, false otherwise
+   * @return bool true if the option object exists, false otherwise
    */
   public function hasShortcut($name)
   {

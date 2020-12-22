@@ -154,7 +154,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
    * @param boolean $recursive False will prevent hidden fields from embedded forms from rendering
    *
    * @return string
-   * 
+   *
    * @see sfFormFieldSchema
    */
   public function renderHiddenFields($recursive = true)
@@ -175,7 +175,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
   /**
    * Returns true if the form has some global errors.
    *
-   * @return Boolean true if the form has some global errors, false otherwise
+   * @return bool true if the form has some global errors, false otherwise
    */
   public function hasGlobalErrors()
   {
@@ -252,7 +252,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
   /**
    * Returns true if the form is bound to input values.
    *
-   * @return Boolean true if the form is bound to input values, false otherwise
+   * @return bool true if the form is bound to input values, false otherwise
    */
   public function isBound()
   {
@@ -279,7 +279,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
    *
    * It returns false if the form is not bound.
    *
-   * @return Boolean true if the form is valid, false otherwise
+   * @return bool true if the form is valid, false otherwise
    */
   public function isValid()
   {
@@ -296,7 +296,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
    *
    * It returns false if the form is not bound.
    *
-   * @return Boolean true if the form has no errors, false otherwise
+   * @return bool true if the form has no errors, false otherwise
    */
   public function hasErrors()
   {
@@ -465,7 +465,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
    * @param  string $name The name used to embed the form
    *
    * @return sfForm
-   * 
+   *
    * @throws InvalidArgumentException If there is no form embedded with the supplied name
    */
   public function getEmbeddedForm($name)
@@ -976,7 +976,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
   /**
    * Returns true if the form is multipart.
    *
-   * @return Boolean true if the form is multipart
+   * @return bool true if the form is multipart
    */
   public function isMultipart()
   {
@@ -1028,7 +1028,7 @@ class sfForm implements ArrayAccess, Iterator, Countable
    *
    * @param  string $name The name of the bound field
    *
-   * @return Boolean true if the widget exists, false otherwise
+   * @return bool true if the widget exists, false otherwise
    */
   public function offsetExists($name)
   {
