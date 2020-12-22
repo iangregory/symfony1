@@ -2,6 +2,7 @@
 
 /**
  * sfCacheSessionStorage manages session storage via a signed cookie and cache backend.
+ * It can also accept x-token header containing the session id and restore from the cache when cookie is not available
  *
  * This class stores the session data in via sfCache instance and with an id issued in a
  * signed cookie. Useful when you don't want to store the session.
@@ -59,18 +60,20 @@ class sfCacheSessionStorage extends sfStorage
     // create cache instance
     if (isset($this->options['cache']) && $this->options['cache']['class'])
     {
+
       $this->cache = new $this->options['cache']['class'](is_array($this->options['cache']['param']) ? $this->options['cache']['param'] : array());
     }
     else
     {
-      throw new InvalidArgumentException('sfCacheSessionStorage requires cache option.');
+      throw new InvalidArgumentException('sfCacheSessionStorage requires cache option.'.print_r($this->options,1).print_r($options,1));
     }
 
     $this->context     = sfContext::getInstance();
 
+    // Request + response objects only exist when using symfony's request handler (and thus cookies)
     $this->dispatcher  = $this->context->getEventDispatcher();
-    $this->request     = $this->context->getRequest();
-    $this->response    = $this->context->getResponse();
+    $this->request     = $this->context->getRequest() ?: new sfWebRequest($this->dispatcher);
+    $this->response    = $this->context->getResponse() ?: new sfWebResponse($this->dispatcher);
 
     $cookie = $this->request->getCookie($this->options['session_name']);
 
@@ -94,6 +97,13 @@ class sfCacheSessionStorage extends sfStorage
     {
       // cookie format wrong
       $this->id = null;
+    }
+
+    // Fall back to using x-token in header if cookie not present for api usuage
+    $token = isset($_SERVER['HTTP_X_TOKEN']) ? $_SERVER['HTTP_X_TOKEN'] : '';
+    if (empty($this->id) && $token)
+    {
+        $this->id = $token;
     }
 
     if(empty($this->id))
