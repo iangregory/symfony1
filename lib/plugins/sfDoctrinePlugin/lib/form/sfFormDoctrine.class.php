@@ -187,7 +187,7 @@ abstract class sfFormDoctrine extends sfFormObject
         if ($this->validatorSchema[$field] instanceof sfValidatorFile)
         {
           $values[$field] = $this->processUploadedFile($field, null, $valuesToProcess);
-        }          
+        }
       }
     }
 
@@ -197,7 +197,7 @@ abstract class sfFormDoctrine extends sfFormObject
   /**
    * Returns true if the current form has some associated i18n objects.
    *
-   * @return Boolean true if the current form has some associated i18n objects, false otherwise
+   * @return bool true if the current form has some associated i18n objects, false otherwise
    */
   public function isI18n()
   {
@@ -402,11 +402,11 @@ abstract class sfFormDoctrine extends sfFormObject
 
   /**
    * Returns the name of the related model.
-   * 
+   *
    * @param string $alias A relation alias
-   * 
+   *
    * @return string
-   * 
+   *
    * @throws InvalidArgumentException If no relation with the supplied alias exists on the current model
    */
   protected function getRelatedModelName($alias)

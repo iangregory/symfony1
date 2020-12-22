@@ -10,7 +10,7 @@
 
 /**
  * Base class for forms that deal with a single object.
- * 
+ *
  * @package    symfony
  * @subpackage form
  * @author     Kris Wallsmith <kris.wallsmith@symfony-project.com>
@@ -24,7 +24,7 @@ abstract class sfFormObject extends BaseForm
 
   /**
    * Returns the current model name.
-   * 
+   *
    * @return string
    */
   abstract public function getModelName();
@@ -50,7 +50,7 @@ abstract class sfFormObject extends BaseForm
    * Processes cleaned up values.
    *
    * @param  array $values An array of values
-   * 
+   *
    * @return array An array of cleaned up values
    */
   abstract public function processValues($values);
@@ -58,7 +58,7 @@ abstract class sfFormObject extends BaseForm
   /**
    * Returns true if the current form embeds a new object.
    *
-   * @return Boolean true if the current form embeds a new object, false otherwise
+   * @return bool true if the current form embeds a new object, false otherwise
    */
   public function isNew()
   {
@@ -82,7 +82,7 @@ abstract class sfFormObject extends BaseForm
    * @param  array An array of uploaded files (in the $_FILES or $_GET format)
    * @param  mixed An optional connection object
    *
-   * @return Boolean true if the form is valid, false otherwise
+   * @return bool true if the form is valid, false otherwise
    */
   public function bindAndSave($taintedValues, $taintedFiles = null, $con = null)
   {
@@ -108,7 +108,7 @@ abstract class sfFormObject extends BaseForm
    * @return mixed The current saved object
    *
    * @see doSave()
-   * 
+   *
    * @throws sfValidatorError If the form is not valid
    */
   public function save($con = null)

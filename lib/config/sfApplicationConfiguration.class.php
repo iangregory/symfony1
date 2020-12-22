@@ -178,10 +178,10 @@ abstract class sfApplicationConfiguration extends ProjectConfiguration
 
   /**
    * Adds enabled plugins to autoload config.
-   * 
+   *
    * @param   sfEvent $event
    * @param   array   $config
-   * 
+   *
    * @return  array
    */
   public function filterAutoloadConfig(sfEvent $event, array $config)
@@ -691,7 +691,7 @@ abstract class sfApplicationConfiguration extends ProjectConfiguration
   /**
    * Returns true if this configuration has debug enabled.
    *
-   * @return Boolean true if the configuration has debug enabled, false otherwise
+   * @return bool true if the configuration has debug enabled, false otherwise
    */
   public function isDebug()
   {

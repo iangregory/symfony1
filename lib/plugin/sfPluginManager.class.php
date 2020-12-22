@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -103,7 +103,7 @@ class sfPluginManager
    * @param string $plugin  The plugin name
    * @param array  $options An array of options
    *
-   * @return Boolean|string true if the plugin is already installed, the name of the installed plugin otherwise
+   * @return bool|string true if the plugin is already installed, the name of the installed plugin otherwise
    */
   public function installPlugin($plugin, $options = array())
   {
@@ -393,7 +393,7 @@ class sfPluginManager
    * @param  string $plugin   The plugin name
    * @param  string $version  The plugin version
    *
-   * @return Boolean true if the plugin is compatible, false otherwise
+   * @return bool true if the plugin is compatible, false otherwise
    */
   public function isPluginCompatible($plugin, $version)
   {
@@ -468,7 +468,7 @@ class sfPluginManager
    *
    * @param  array   $dependency An dependency array
    *
-   * @return Boolean true if the plugin is compatible, false otherwise
+   * @return bool true if the plugin is compatible, false otherwise
    */
   protected function isPluginCompatibleWithDependency($dependency)
   {
@@ -480,7 +480,7 @@ class sfPluginManager
    *
    * @param  array   $dependency A dependency array
    *
-   * @return Boolean true if the dependency is valid, false otherwise
+   * @return bool true if the dependency is valid, false otherwise
    */
   protected function checkDependency($dependency)
   {

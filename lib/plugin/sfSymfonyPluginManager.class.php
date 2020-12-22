@@ -3,7 +3,7 @@
 /*
  * This file is part of the symfony package.
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -212,7 +212,7 @@ class sfSymfonyPluginManager extends sfPluginManager
    *
    * @param  array   $dependency A dependency array
    *
-   * @return Boolean true if the plugin is compatible, false otherwise
+   * @return bool true if the plugin is compatible, false otherwise
    */
   protected function isPluginCompatibleWithDependency($dependency)
   {
