@@ -186,7 +186,7 @@ class sfRoute implements Serializable
      *
      * @param  mixed   $params    The parameter values
      * @param  array   $context   The context
-     * @param  Boolean $absolute  Whether to generate an absolute URL
+     * @param  bool $absolute  Whether to generate an absolute URL
      *
      * @return string The generated URL
      */

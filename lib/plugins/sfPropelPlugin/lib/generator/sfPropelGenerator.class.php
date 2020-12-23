@@ -34,7 +34,7 @@ class sfPropelGenerator extends sfModelGenerator
     $this->setGeneratorClass('sfPropelModule');
   }
 
-  /** 
+  /**
    * Configures this generator.
    */
   public function configure()
@@ -132,7 +132,7 @@ class sfPropelGenerator extends sfModelGenerator
   {
     $this->dbMap = Propel::getDatabaseMap();
     $this->tableMap = call_user_func(array($this->modelClass . 'Peer', 'getTableMap'));
-    // load all related table maps, 
+    // load all related table maps,
     // and all tables related to the related table maps (for m2m relations)
     foreach ($this->tableMap->getRelations() as $relation)
     {
@@ -262,7 +262,7 @@ class sfPropelGenerator extends sfModelGenerator
    *
    * @param  string $context The Context
    *
-   * @return array An array of configuration for all the fields in a given context 
+   * @return array An array of configuration for all the fields in a given context
    */
   public function getFieldsConfiguration($context)
   {
@@ -304,7 +304,7 @@ class sfPropelGenerator extends sfModelGenerator
   /**
    * Gets all the fields for the current model.
    *
-   * @param  Boolean $withM2M Whether to include m2m fields or not
+   * @param  bool $withM2M Whether to include m2m fields or not
    *
    * @return array   An array of field names
    */
