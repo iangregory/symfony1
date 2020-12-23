@@ -92,7 +92,7 @@ abstract class sfModelGenerator extends sfGenerator
   /**
    * Gets the primary key name.
    *
-   * @param Boolean $firstOne Whether to return the first PK or not
+   * @param bool $firstOne Whether to return the first PK or not
    *
    * @return array An array of primary keys
    */
@@ -177,7 +177,7 @@ abstract class sfModelGenerator extends sfGenerator
     return implode(".'&", $params);
   }
 
-  /** 
+  /**
    * Configures this generator.
    */
   abstract protected function configure();
