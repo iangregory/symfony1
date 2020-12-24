@@ -295,7 +295,7 @@ abstract class sfComponent
      * <code>$this->setVar('name', 'value')</code>
      *
      * @param string $key   The variable name
-     * @param string $value The variable value
+     * @param mixed $value The variable value
      *
      * @return boolean always true
      *
