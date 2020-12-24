@@ -180,7 +180,7 @@ abstract class sfAction extends sfComponent
      * This method stops the action. So, no code is executed after a call to this method.
      *
      * @param  string $url         Url
-     * @param  string $statusCode  Status code (default to 302)
+     * @param  string|object|array $statusCode  Status code (default to 302), or the subject to redirct to (url_for2 style signature)
      *
      * @throws sfStopException
      */
